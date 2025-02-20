@@ -1,16 +1,23 @@
 Package: ruraldefinitions
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Data package for accessing and manipulating rural definitions
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Camden", "Blatchly",
+      email = "camden.blatchly@ruralinnovation.us",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: This package aggregates common rural definitions and makes them accessible to R programmers.
+    County-level rural definitions are included within the package, while 
+    rural definitions at more detailed geographic levels (such as Census 
+    tract) are loaded from an S3 bucket.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.3.2
+Imports: 
+    tibble
