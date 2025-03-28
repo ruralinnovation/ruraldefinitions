@@ -2,6 +2,7 @@
 #'
 #' @param name Name of the rural definition
 #' @param year Publication year of the desired definition
+#' @export
 get_definition <- function(name, year) {
 
   base_url <- "https://ruraldefinitions.s3.us-east-1.amazonaws.com/clean/"
