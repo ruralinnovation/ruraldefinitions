@@ -3,10 +3,7 @@ library(dplyr)
 library(sf)
 library(readxl)
 library(curl)
-library(here)
 library(arrow)
-
-i_am("data-raw/ruca_2010.R")
 
 url <- "https://ruraldefinitions.s3.us-east-1.amazonaws.com/raw/ruca2010revised.xlsx"
 tempfile <- tempfile(fileext = ".xlsx")

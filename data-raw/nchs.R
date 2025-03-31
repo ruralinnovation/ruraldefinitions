@@ -1,3 +1,6 @@
+# Script for loading all National Center for Health Statistics (NCHS)
+# definitions: 1990, 2006, 2013, 2023
+
 library(dplyr)
 library(readr)
 
