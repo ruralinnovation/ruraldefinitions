@@ -20,6 +20,8 @@ package:
 
 | Name          | Year | Geographic Unit |
 |:-------------|:----|:---------------|
+| RUCA          | 1990 | Tract           |
+| RUCA          | 2000 | Tract           |
 | RUCA          | 2010 | Tract           |
 | CORI          | 2020 | Tract           |
 | CBSA          | 2020 | County          |
