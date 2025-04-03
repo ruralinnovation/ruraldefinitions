@@ -4,24 +4,23 @@ library(readxl)
 library(curl)
 library(arrow)
 
-url <- "https://ruraldefinitions.s3.us-east-1.amazonaws.com/raw/ruca2010revised.xlsx"
-tempfile <- tempfile(fileext = ".xlsx")
+url <- "https://ruraldefinitions.s3.us-east-1.amazonaws.com/raw/ruca00.xls"
+tempfile <- tempfile(fileext = ".xls")
 
 curl_download(url, tempfile)
 ruca_raw <- read_excel(
   tempfile,
-  sheet = "Data",
-  skip = 1
+  sheet = "Data"
 )
 
 ruca_clean <- ruca_raw %>%
   rename(
-    geoid = `State-County-Tract FIPS Code (lookup by address at http://www.ffiec.gov/Geocode/)`
+    geoid = `State County Tract Code`
   ) %>%
   mutate(
     name = "RUCA",
-    year = 2010,
-    rural_def = as.character(`Primary RUCA Code 2010`),
+    year = 2000,
+    rural_def = as.character(`RUCA Primary Code 2000`),
     is_rural = ifelse(
       rural_def >= 4,
       "Rural",
@@ -30,7 +29,7 @@ ruca_clean <- ruca_raw %>%
     rural_def = case_when(
       rural_def == "1" ~ "1. Metropolitan area core: primary flow within an urbanized area (UA)",
       rural_def == "2" ~ "2. Metropolitan area high commuting: primary flow 30% or more to a UA",
-      rural_def == "3" ~ "3. Metropolitan area low commuting: primary flow 10% to 30% to a UA",
+      rural_def == "3" ~ "3. Metropolitan area low commuting: primary flow 5% to 30% to a UA",
       rural_def == "4" ~ "4. Micropolitan area core: primary flow within an Urban Cluster of 10,000 to 49,999 (large UC)",
       rural_def == "5" ~ "5. Micropolitan high commuting: primary flow 30% or more to a large UC",
       rural_def == "6" ~ "6. Micropolitan low commuting: primary flow 10% to 30% to a large UC",
@@ -46,4 +45,4 @@ ruca_clean <- ruca_raw %>%
 
 parquet_buffer <- tempfile()
 write_parquet(ruca_clean, parquet_buffer)
-cori.db::put_s3_object("ruraldefinitions", "clean/ruca_2010.parquet", file_path = parquet_buffer)
+cori.db::put_s3_object("ruraldefinitions", "clean/ruca_2000.parquet", file_path = parquet_buffer)
