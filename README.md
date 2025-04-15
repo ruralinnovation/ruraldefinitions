@@ -20,6 +20,7 @@ package:
 
 | Name          | Year | Geographic Unit |
 |:-------------|:----|:---------------|
+| Census        | 2010 | Block           |
 | Census        | 2020 | Block           |
 | RUCA          | 1990 | Tract           |
 | RUCA          | 2000 | Tract           |
