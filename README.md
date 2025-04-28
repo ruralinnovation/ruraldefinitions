@@ -18,29 +18,30 @@ definition name and year as parameters. For instance, the
 Here are the definitions and years that are currently supported by the 
 package:
 
-| Name          | Year | Geographic Unit |
-|:-------------|:----|:---------------|
-| Census        | 2010 | Block           |
-| Census        | 2020 | Block           |
-| RUCA          | 1990 | Tract           |
-| RUCA          | 2000 | Tract           |
-| RUCA          | 2010 | Tract           |
-| CORI          | 2020 | Tract           |
-| CBSA          | 2020 | County          |
-| NCHS          | 1990 | County          |
-| NCHS          | 2006 | County          |
-| NCHS          | 2013 | County          |
-| NCHS          | 2023 | County          |
-| RUCC          | 1974 | County          |
-| RUCC          | 1983 | County          |
-| RUCC          | 1993 | County          |
-| RUCC          | 2003 | County          |
-| RUCC          | 2013 | County          |
-| RUCC          | 2023 | County          |
-| UIC           | 1993 | County          |
-| UIC           | 2003 | County          |
-| UIC           | 2013 | County          |
-| UIC           | 2024 | County          |
+| Name          | Year | Geographic Unit | Download |
+|:--------------|:-----|:----------------|:---------|
+| Census        | 2010 | Block           | Available through package |
+| Census        | 2020 | Block           | Available through package |
+| RUCA          | 1990 | Tract           | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/ruca_1990.csv) |
+| RUCA          | 2000 | Tract           | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/ruca_2000.csv) |
+| RUCA          | 2010 | Tract           | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/ruca_2010.csv) |
+| CORI          | 2020 | Tract           | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/cori_2020.csv) |
+| CBSA          | 2020 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/cbsa_2020.csv) |
+| NCHS          | 1990 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/nchs_1990.csv) |
+| NCHS          | 2006 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/nchs_2006.csv) |
+| NCHS          | 2013 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/nchs_2013.csv) |
+| NCHS          | 2023 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/nchs_2023.csv) |
+| RUCC          | 1974 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/rucc_1974.csv) |
+| RUCC          | 1983 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/rucc_1983.csv) |
+| RUCC          | 1993 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/rucc_1993.csv) |
+| RUCC          | 2003 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/rucc_2003.csv) |
+| RUCC          | 2013 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/rucc_2013.csv) |
+| RUCC          | 2023 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/rucc_2023.csv) |
+| UIC           | 1993 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/uic_1993.csv) |
+| UIC           | 2003 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/uic_2003.csv) |
+| UIC           | 2013 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/uic_2013.csv) |
+| UIC           | 2024 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/uic_2024.csv) |
+
 
 ## Selecting a definition
 

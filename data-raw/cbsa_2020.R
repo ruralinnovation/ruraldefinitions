@@ -42,4 +42,7 @@ cbsa_2020 <- dplyr::left_join(
 
 usethis::use_data(cbsa_2020, overwrite = TRUE)
 
-
+# Make available via download
+csv_buffer <- tempfile()
+readr::write_csv(cbsa_2020, csv_buffer)
+cori.db::put_s3_object("ruraldefinitions", "download/cbsa_2020.csv", file_path = csv_buffer)
