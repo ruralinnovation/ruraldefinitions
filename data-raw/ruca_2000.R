@@ -46,3 +46,7 @@ ruca_clean <- ruca_raw %>%
 parquet_buffer <- tempfile()
 write_parquet(ruca_clean, parquet_buffer)
 cori.db::put_s3_object("ruraldefinitions", "clean/ruca_2000.parquet", file_path = parquet_buffer)
+
+csv_buffer <- tempfile()
+readr::write_csv(ruca_clean, csv_buffer)
+cori.db::put_s3_object("ruraldefinitions", "download/ruca_2000.csv", file_path = csv_buffer)

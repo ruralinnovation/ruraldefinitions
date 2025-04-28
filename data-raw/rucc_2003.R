@@ -31,3 +31,8 @@ rucc_2003 <- rucc_dta_raw %>%
   select(geoid, name, year, rural_def, is_rural)
 
 usethis::use_data(rucc_2003, overwrite = TRUE)
+
+
+csv_buffer <- tempfile()
+readr::write_csv(rucc_2003, csv_buffer)
+cori.db::put_s3_object("ruraldefinitions", "download/rucc_2003.csv", file_path = csv_buffer)

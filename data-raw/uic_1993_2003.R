@@ -57,3 +57,12 @@ uic_2003 <- uic_dta_raw %>%
 
 usethis::use_data(uic_1993, overwrite = TRUE)
 usethis::use_data(uic_2003, overwrite = TRUE)
+
+csv_buffer <- tempfile()
+readr::write_csv(uic_1993, csv_buffer)
+cori.db::put_s3_object("ruraldefinitions", "download/uic_1993.csv", file_path = csv_buffer)
+
+
+csv_buffer <- tempfile()
+readr::write_csv(uic_2003, csv_buffer)
+cori.db::put_s3_object("ruraldefinitions", "download/uic_2003.csv", file_path = csv_buffer)
