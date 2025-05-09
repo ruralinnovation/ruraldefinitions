@@ -27,6 +27,7 @@ package:
 | RUCA          | 2010 | Tract           | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/ruca_2010.csv) |
 | CORI          | 2020 | Tract           | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/cori_2020.csv) |
 | CBSA          | 2020 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/cbsa_2020.csv) |
+| CBSA          | 2023 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/cbsa_2023.csv) |
 | NCHS          | 1990 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/nchs_1990.csv) |
 | NCHS          | 2006 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/nchs_2006.csv) |
 | NCHS          | 2013 | County          | [CSV](https://ruraldefinitions.s3.us-east-1.amazonaws.com/download/nchs_2013.csv) |
