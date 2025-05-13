@@ -19,5 +19,5 @@ LazyData: true
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
-Imports: 
+Suggests: 
     arrow
