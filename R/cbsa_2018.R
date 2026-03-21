@@ -1,0 +1,15 @@
+#' Core-Based Statistical Areas 2018 rural definition
+#'
+#' County-level rural classification based on the 2018 OMB mid-decade
+#' delineation update.
+#'
+#' @format A tibble with 5 variables:
+#' \describe{
+#'   \item{geoid}{string County GEOID code}
+#'   \item{name}{string Name of the rural definition}
+#'   \item{year}{dbl Year the definition was released}
+#'   \item{rural_def}{string Detailed rural classification: Metro, Micro, or Non-CBSA}
+#'   \item{is_rural}{string Value of either Rural or Nonrural}
+#' }
+#' @source \url{https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2018.html#list-tab-790442341}
+"cbsa_2018"
