@@ -1,23 +1,26 @@
 Package: ruraldefinitions
 Type: Package
 Title: Data package for accessing and manipulating rural definitions
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
     person(
       "Camden", "Blatchly",
-      email = "camden.blatchly@ruralinnovation.us",
+      role = "aut"
+    ),
+    person(
+      "Drew", "Rosebush",
+      email = "drew.rosebush@ruralinnovation.us",
       role = c("aut", "cre")
     )
   )
-Description: This package aggregates common rural definitions and makes them accessible to R programmers.
-    County-level rural definitions are included within the package, while 
-    rural definitions at more detailed geographic levels (such as Census 
-    tract) are loaded from an S3 bucket.
+Description: Aggregates federal rural definitions and makes them accessible
+    to R programmers. County-level definitions are included as package data;
+    tract-level definitions are loaded from an S3 bucket via get_definition().
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 3.5)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Suggests: 
     arrow
