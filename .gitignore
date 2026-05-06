@@ -43,5 +43,5 @@ vignettes/*.pdf
 renv
 
 *.png
-
+*.svg
 .DS_Store

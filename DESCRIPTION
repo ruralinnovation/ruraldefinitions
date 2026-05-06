@@ -22,5 +22,13 @@ LazyData: true
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.3
-Suggests: 
-    arrow
+Suggests:
+    arrow,
+    cori.charts,
+    here,
+    knitr,
+    rmarkdown,
+    sf,
+    tidyverse,
+    tigris
+VignetteBuilder: knitr
