@@ -2,7 +2,7 @@ library(tigris)
 library(dplyr)
 library(sf)
 library(arrow)
-library(cori.db)
+library(cori.data.s3)
 
 # CORI 2010: nonmetro counties per CBSA 2018 (OMB mid-decade update) +
 # rural tracts in metro counties per RUCA 2010 (primary code >= 4)
@@ -53,8 +53,8 @@ cori_2010 <- ruca_2010 %>%
 # --- Push to S3 ---
 parquet_buffer <- tempfile()
 arrow::write_parquet(cori_2010, parquet_buffer)
-cori.db::put_s3_object("ruraldefinitions", "clean/cori_2010.parquet", file_path = parquet_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "clean/cori_2010.parquet", file_path = parquet_buffer)
 
 csv_buffer <- tempfile()
 readr::write_csv(cori_2010, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/cori_2010.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/cori_2010.csv", file_path = csv_buffer)

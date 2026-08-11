@@ -22,9 +22,13 @@ LazyData: true
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.3
+Remotes:
+  ruralinnovation/cori.data.s3,
+  ruralinnovation/cori.charts
 Suggests:
     arrow,
     cori.charts,
+    cori.data.s3,
     here,
     knitr,
     rmarkdown,

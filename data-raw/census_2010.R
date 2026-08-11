@@ -68,4 +68,4 @@ for (st_fips in state_id_crosswalk$state_fips) {
 
 parquet_buffer <- tempfile()
 write_parquet(census_2010, parquet_buffer)
-cori.db::put_s3_object("ruraldefinitions", "clean/census_2010.parquet", file_path = parquet_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "clean/census_2010.parquet", file_path = parquet_buffer)

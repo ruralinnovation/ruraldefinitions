@@ -37,4 +37,4 @@ usethis::use_data(uic_2024, overwrite = TRUE)
 # Make available via download
 csv_buffer <- tempfile()
 readr::write_csv(uic_2024, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/uic_2024.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/uic_2024.csv", file_path = csv_buffer)

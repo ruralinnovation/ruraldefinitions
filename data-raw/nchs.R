@@ -47,7 +47,7 @@ usethis::use_data(nchs_2023, overwrite = TRUE)
 
 csv_buffer <- tempfile()
 readr::write_csv(nchs_2023, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/nchs_2023.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/nchs_2023.csv", file_path = csv_buffer)
 
 # 2013
 nchs_2013 <- nchs_all_clean %>%
@@ -56,7 +56,7 @@ usethis::use_data(nchs_2013, overwrite = TRUE)
 
 csv_buffer <- tempfile()
 readr::write_csv(nchs_2013, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/nchs_2013.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/nchs_2013.csv", file_path = csv_buffer)
 
 # 2006
 nchs_2006 <- nchs_all_clean %>%
@@ -65,7 +65,7 @@ usethis::use_data(nchs_2006, overwrite = TRUE)
 
 csv_buffer <- tempfile()
 readr::write_csv(nchs_2006, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/nchs_2006.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/nchs_2006.csv", file_path = csv_buffer)
 
 # 1990
 
@@ -75,5 +75,5 @@ usethis::use_data(nchs_1990, overwrite = TRUE)
 
 csv_buffer <- tempfile()
 readr::write_csv(nchs_1990, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/nchs_1990.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/nchs_1990.csv", file_path = csv_buffer)
 

@@ -37,4 +37,4 @@ usethis::use_data(rucc_2023, overwrite = TRUE)
 
 csv_buffer <- tempfile()
 readr::write_csv(rucc_2023, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/rucc_2023.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/rucc_2023.csv", file_path = csv_buffer)

@@ -48,8 +48,8 @@ usethis::use_data(rucc_1993, overwrite = TRUE)
 
 csv_buffer <- tempfile()
 readr::write_csv(rucc_1983, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/rucc_1983.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/rucc_1983.csv", file_path = csv_buffer)
 
 csv_buffer <- tempfile()
 readr::write_csv(rucc_1993, csv_buffer)
-cori.db::put_s3_object("ruraldefinitions", "download/rucc_1993.csv", file_path = csv_buffer)
+cori.data.s3::put_s3_object("ruraldefinitions", "download/rucc_1993.csv", file_path = csv_buffer)
