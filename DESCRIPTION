@@ -17,6 +17,7 @@ Description: Aggregates federal rural definitions and makes them accessible
     to R programmers. County-level definitions are included as package data;
     tract-level definitions are loaded from an S3 bucket via get_definition().
 License: MIT + file LICENSE
+URL: https://ruralinnovation.github.io/ruraldefinitions
 Encoding: UTF-8
 LazyData: true
 Depends: 
