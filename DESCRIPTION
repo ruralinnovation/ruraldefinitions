@@ -34,6 +34,7 @@ Suggests:
     here,
     knitr,
     rmarkdown,
+    rsvg,
     sf,
     tidyverse,
     tigris
