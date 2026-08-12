@@ -3,3 +3,5 @@
 ^data-raw$
 ^\.git$
 ^export$
+^\.idea$
+^_pkgdown\.yml$

@@ -13,6 +13,7 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
+Maintainer: Drew Rosebush <drew.rosebush@ruralinnovation.us>
 Description: Aggregates federal rural definitions and makes them accessible
     to R programmers. County-level definitions are included as package data;
     tract-level definitions are loaded from an S3 bucket via get_definition().

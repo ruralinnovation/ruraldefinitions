@@ -1,0 +1,42 @@
+url: https://ruralinnovation.github.io/ruraldefinitions
+
+template:
+  bootstrap: 5
+
+reference:
+- title: Functions
+  contents:
+  - get_definition
+
+- title: CBSA Definitions
+  desc: Core-Based Statistical Area definitions
+  contents:
+  - cbsa_2018
+  - cbsa_2020
+  - cbsa_2023
+
+- title: NCHS Urban-Rural Classification
+  desc: National Center for Health Statistics classification scheme
+  contents:
+  - nchs_1990
+  - nchs_2006
+  - nchs_2013
+  - nchs_2023
+
+- title: Rural-Urban Continuum Codes (RUCC)
+  desc: USDA Economic Research Service RUCC
+  contents:
+  - rucc_1974
+  - rucc_1983
+  - rucc_1993
+  - rucc_2003
+  - rucc_2013
+  - rucc_2023
+
+- title: Urban Influence Codes (UIC)
+  desc: USDA Economic Research Service UIC
+  contents:
+  - uic_1993
+  - uic_2003
+  - uic_2013
+  - uic_2024

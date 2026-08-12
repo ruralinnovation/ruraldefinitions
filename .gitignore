@@ -45,3 +45,6 @@ renv
 *.png
 *.svg
 .DS_Store
+.idea
+docs/
+pkgdown/
