@@ -33,9 +33,14 @@ Suggests:
     cori.data.s3,
     here,
     knitr,
+    magick,
+    ragg,
     rmarkdown,
     rsvg,
     sf,
+    svglite,
+    systemfonts,
+    textshaping,
     tidyverse,
     tigris
 VignetteBuilder: knitr
