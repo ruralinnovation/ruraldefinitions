@@ -1,4 +1,3 @@
 # License
 
-    YEAR: 2025
-    COPYRIGHT HOLDER: Camden Blatchly
+    Copyright © 2026 Center on Rural Innovation. All rights reserved.
