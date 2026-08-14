@@ -5,3 +5,5 @@
 ^export$
 ^\.idea$
 ^_pkgdown\.yml$
+^\.github$
+^pkgdown$

@@ -22,15 +22,15 @@ URL: https://ruralinnovation.github.io/ruraldefinitions
 Encoding: UTF-8
 LazyData: true
 Depends: 
-    R (>= 3.5)
+    R (>= 3.5),
+    cori.data.s3
 RoxygenNote: 7.3.3
 Remotes:
-  ruralinnovation/cori.data.s3,
-  ruralinnovation/cori.charts
+  ruralinnovation/cori.charts,
+  ruralinnovation/cori.data.s3
 Suggests:
     arrow,
     cori.charts,
-    cori.data.s3,
     here,
     knitr,
     magick,
