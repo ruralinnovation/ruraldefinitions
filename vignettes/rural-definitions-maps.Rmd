@@ -28,56 +28,52 @@ load_fonts()
 options(tigris_use_cache = TRUE, tigris_progress_bar = FALSE)
 ```
 
-## Parameters
-
-Modify these blocks to change colors and output paths.
 
 ```{r params-output}
-export_dir  <- here::here("export")
 chart_w     <- 10
 chart_h     <- 6
 ```
 
 ```{r params-colors}
-# Brand anchor colors — all palettes are derived from these two
+# Colors
 color_rural    <- cori_colors[["Emerald"]]       # "#00825B"
 color_nonrural <- cori_colors[["Dark Purple"]]   # "#211448"
 
-# CBSA 2023 (3 classes) -------------------------------------------------------
+# CBSA 2023
 colors_cbsa <- c(
   "Metro"    = color_nonrural,
   "Micro"    = "#086656",
   "Non-CBSA" = color_rural
 )
 
-# RUCC 2023 (9 codes, 1 = most urban → 9 = most rural) -----------------------
+# RUCC 2023 (9 codes)
 colors_rucc <- setNames(
   colorRampPalette(c(color_nonrural, color_rural))(9),
   as.character(1:9)
 )
 
-# NCHS 2023 (6 codes, 1 = most urban → 6 = most rural) -----------------------
+# NCHS 2023 (6 codes, 1 = most urban - 6 = most rural)
 colors_nchs <- setNames(
   colorRampPalette(c(color_nonrural, color_rural))(6),
   as.character(1:6)
 )
 
-# UIC 2024 (9 codes, 1 = most urban → 9 = most rural) ------------------------
+# UIC 2024 (9 codes, 1 = most urban - 9 = most rural)
 colors_uic <- setNames(
   colorRampPalette(c(color_nonrural, color_rural))(9),
   as.character(1:9)
 )
 
-# RUCA 2020 (codes 1–10, 99 = water-only tracts) -----------------------------
+# RUCA 2020 (codes 1–10)
 colors_ruca <- c(
   setNames(colorRampPalette(c(color_nonrural, color_rural))(10), as.character(1:10)),
   "99" = "#FFFFFF"
 )
 
-# CORI 2020 (3 classes) -------------------------------------------------------
+# CORI 2020
 colors_cori <- c(
-  "Metro"                = color_nonrural,
-  "Nonmetro/RUCA 4+ carveouts"             = color_rural
+  "Metro"                      = color_nonrural,
+  "Nonmetro/RUCA 4+ carveouts" = color_rural
 )
 ```
 
@@ -143,23 +139,7 @@ fig_cbsa <- ggplot() +
     subtitle = "County-level OMB metropolitan/micropolitan delineation",
     caption = "Source: U.S. Office of Management and Budget, 2023 delineations."
   ) +
-  theme_cori_map() +
-  theme(
-    legend.position = "top",
-    legend.direction = "horizontal",
-    legend.key.width = unit(20, "pt"),
-    legend.key.height = unit(20, "pt"),
-    legend.spacing.x = unit(8, "pt"),
-    legend.text = element_text(size = 10),
-    plot.caption = element_text(size = 8, hjust = 0, lineheight = 1.2)
-  )
-
-dir.create(export_dir, showWarnings = FALSE, recursive = TRUE)
-
-save_plot(fig_cbsa, file.path(export_dir, "map_cbsa_2023.png"),
-          chart_height = chart_h, chart_width = chart_w)
-save_plot(fig_cbsa, file.path(export_dir, "map_cbsa_2023.svg"),
-          chart_height = chart_h, chart_width = chart_w, add_logo = FALSE)
+  theme_cori_map()
 
 fig_cbsa
 ```
@@ -212,19 +192,8 @@ fig_rucc <- ggplot() +
   ) +
   theme_cori_map() +
   theme(
-    legend.position = "top",
-    legend.direction = "horizontal",
-    legend.key.width = unit(20, "pt"),
-    legend.key.height = unit(20, "pt"),
-    legend.spacing.x = unit(6, "pt"),
-    legend.text = element_text(size = 8),
-    plot.caption = element_text(size = 8, hjust = 0, lineheight = 1.2)
+    legend.text = element_text(size = 12)
   )
-
-save_plot(fig_rucc, file.path(export_dir, "map_rucc_2023.png"),
-          chart_height = chart_h, chart_width = chart_w)
-save_plot(fig_rucc, file.path(export_dir, "map_rucc_2023.svg"),
-          chart_height = chart_h, chart_width = chart_w, add_logo = FALSE)
 
 fig_rucc
 ```
@@ -271,21 +240,7 @@ fig_nchs <- ggplot() +
     subtitle = "Six-level county classification from the National Center for Health Statistics",
     caption = "Source: National Center for Health Statistics, 2023 Urban-Rural Classification Scheme."
   ) +
-  theme_cori_map() +
-  theme(
-    legend.position = "top",
-    legend.direction = "horizontal",
-    legend.key.width = unit(20, "pt"),
-    legend.key.height = unit(20, "pt"),
-    legend.spacing.x = unit(8, "pt"),
-    legend.text = element_text(size = 10),
-    plot.caption = element_text(size = 8, hjust = 0, lineheight = 1.2)
-  )
-
-save_plot(fig_nchs, file.path(export_dir, "map_nchs_2023.png"),
-          chart_height = chart_h, chart_width = chart_w)
-save_plot(fig_nchs, file.path(export_dir, "map_nchs_2023.svg"),
-          chart_height = chart_h, chart_width = chart_w, add_logo = FALSE)
+  theme_cori_map()
 
 fig_nchs
 ```
@@ -336,19 +291,8 @@ fig_uic <- ggplot() +
   ) +
   theme_cori_map() +
   theme(
-    legend.position = "top",
-    legend.direction = "horizontal",
-    legend.key.width = unit(20, "pt"),
-    legend.key.height = unit(20, "pt"),
-    legend.spacing.x = unit(6, "pt"),
-    legend.text = element_text(size = 8),
-    plot.caption = element_text(size = 8, hjust = 0, lineheight = 1.2)
+    legend.text = element_text(size = 12)
   )
-
-save_plot(fig_uic, file.path(export_dir, "map_uic_2024.png"),
-          chart_height = chart_h, chart_width = chart_w)
-save_plot(fig_uic, file.path(export_dir, "map_uic_2024.svg"),
-          chart_height = chart_h, chart_width = chart_w, add_logo = FALSE)
 
 fig_uic
 ```
@@ -405,19 +349,9 @@ fig_ruca <- ggplot() +
   ) +
   theme_cori_map() +
   theme(
-    legend.position = "top",
-    legend.direction = "horizontal",
-    legend.key.width = unit(20, "pt"),
-    legend.key.height = unit(20, "pt"),
-    legend.spacing.x = unit(6, "pt"),
-    legend.text = element_text(size = 8),
-    plot.caption = element_text(size = 8, hjust = 0, lineheight = 1.2)
+    legend.text = element_text(size = 12)
   )
 
-save_plot(fig_ruca, file.path(export_dir, "map_ruca_2020.png"),
-          chart_height = chart_h, chart_width = chart_w)
-save_plot(fig_ruca, file.path(export_dir, "map_ruca_2020.svg"),
-          chart_height = chart_h, chart_width = chart_w, add_logo = FALSE)
 
 fig_ruca
 ```
@@ -459,21 +393,7 @@ fig_cori <- ggplot() +
     subtitle = "Nonmetro counties (CBSA 2023) plus rural tracts (4+) in metro counties (RUCA 2020)",
     caption = "Source: Center on Rural Innovation."
   ) +
-  theme_cori_map() +
-  theme(
-    legend.position = "top",
-    legend.direction = "horizontal",
-    legend.key.width = unit(20, "pt"),
-    legend.key.height = unit(20, "pt"),
-    legend.spacing.x = unit(8, "pt"),
-    legend.text = element_text(size = 10),
-    plot.caption = element_text(size = 8, hjust = 0, lineheight = 1.2)
-  )
-
-save_plot(fig_cori, file.path(export_dir, "map_cori_2020.png"),
-          chart_height = chart_h, chart_width = chart_w)
-save_plot(fig_cori, file.path(export_dir, "map_cori_2020.svg"),
-          chart_height = chart_h, chart_width = chart_w, add_logo = FALSE)
+  theme_cori_map()
 
 fig_cori
 ```
