@@ -4,12 +4,15 @@
 \alias{get_definition}
 \title{Get definition from S3}
 \usage{
-get_definition(name, year)
+get_definition(name = c("census", "cori", "ruca"), year)
 }
 \arguments{
-\item{name}{Name of the rural definition}
+\item{name}{Rural definition to retrieve. One of "census", "cori", or
+"ruca".}
 
-\item{year}{Publication year of the desired definition}
+\item{year}{Publication year of the desired definition. If omitted,
+defaults to the latest year available on S3 for name. Must be one of
+the years available on S3 for name.}
 }
 \description{
 Get definition from S3

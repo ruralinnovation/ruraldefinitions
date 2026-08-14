@@ -1,7 +1,7 @@
 Package: ruraldefinitions
 Type: Package
 Title: Data package for accessing and manipulating rural definitions
-Version: 0.2.0
+Version: 1.0.0
 Authors@R: c(
     person(
       "Camden", "Blatchly",
@@ -21,9 +21,11 @@ License: file LICENSE
 URL: https://ruralinnovation.github.io/ruraldefinitions
 Encoding: UTF-8
 LazyData: true
-Depends: 
+Depends:
     R (>= 3.5),
     cori.data.s3
+Imports:
+    DBI
 RoxygenNote: 7.3.3
 Remotes:
   ruralinnovation/cori.charts,
